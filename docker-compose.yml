@@ -1,0 +1,14 @@
+
+services:
+        camera-service:
+                image: camera-service
+                runtime: nvidia
+                container_name: camera-service
+                network_mode: host
+                restart: unless-stopped
+
+                volumes:
+                        - /tmp/argus_socket:/tmp/argus_socket
+                devices:
+                        - /dev/video0:/dev/video0
+
