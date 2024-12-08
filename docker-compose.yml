@@ -9,6 +9,7 @@ services:
 
                 volumes:
                         - /tmp/argus_socket:/tmp/argus_socket
+                        - ~/calib:/agri/calib 
                 devices:
                         - /dev/video0:/dev/video0
 
